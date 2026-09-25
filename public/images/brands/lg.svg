@@ -1,0 +1,13 @@
+<svg viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- LG Red Circle Emblem -->
+  <g transform="translate(6, 6)">
+    <circle cx="19" cy="19" r="19" fill="#A50034" />
+    <!-- LG Face (G contour, L nose, eye dot) -->
+    <circle cx="13.5" cy="13.5" r="2.4" fill="#FFFFFF" />
+    <path d="M19 12V24H25.5" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M26 13.5A13 13 0 1 0 26 24.5H20.5" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+  <!-- LG Wordmark -->
+  <text x="54" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#FFFFFF" letter-spacing="-0.5">LG</text>
+  <text x="96" y="30" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="9" fill="#A1A1AA" letter-spacing="1">Life's Good</text>
+</svg>

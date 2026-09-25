@@ -42,12 +42,42 @@ export const siteConfig = {
     "Soluções para diferentes espaços"
   ],
   brands: [
-    { name: "CoolSmart", description: "Sistemas eficientes de climatização" },
-    { name: "Nipon", description: "Equipamentos de alta fiabilidade e robustez" },
-    { name: "Haier", description: "Tecnologia moderna e conectividade inteligente" },
-    { name: "Mitsubishi Electric", description: "Referência em eficiência e silêncio" },
-    { name: "Samsung", description: "Inovação tecnológica e climatização uniforme" },
-    { name: "LG", description: "Design moderno e eficiência energética" }
+    {
+      name: "Mitsubishi Electric",
+      description: "Referência japonesa em eficiência energética e silêncio absoluto",
+      logo: "/images/brands/mitsubishi.svg",
+      tag: "Eficiência & Silêncio"
+    },
+    {
+      name: "LG",
+      description: "Tecnologia Dual Inverter, purificação de ar e design moderno",
+      logo: "/images/brands/lg.svg",
+      tag: "Dual Inverter"
+    },
+    {
+      name: "Samsung",
+      description: "Inovação WindFree sem correntes de ar diretas e Wi-Fi inteligente",
+      logo: "/images/brands/samsung.svg",
+      tag: "WindFree™"
+    },
+    {
+      name: "Haier",
+      description: "Autolimpeza avançada, fiabilidade e conectividade hOn",
+      logo: "/images/brands/haier.svg",
+      tag: "Conectividade"
+    },
+    {
+      name: "Nipon",
+      description: "Equipamentos robustos com excelente relação preço-qualidade",
+      logo: "/images/brands/nipon.svg",
+      tag: "Robustez"
+    },
+    {
+      name: "CoolSmart",
+      description: "Sistemas eficientes e versáteis para climatização residencial",
+      logo: "/images/brands/coolsmart.svg",
+      tag: "Sistemas Eficientes"
+    }
   ],
   whyChooseUs: [
     {

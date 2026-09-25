@@ -25,16 +25,34 @@ export const Brands: React.FC = () => {
           {siteConfig.brands.map((brand, idx) => (
             <div
               key={idx}
-              className="p-5 rounded-2xl bg-neutral-900/60 border border-neutral-800 hover:border-neutral-600 transition-all text-center flex flex-col justify-between items-center group hover:bg-neutral-900"
+              className="p-4 rounded-2xl bg-neutral-900/60 border border-neutral-800 hover:border-neutral-600 transition-all text-center flex flex-col justify-between items-center group hover:bg-neutral-900/90 hover:shadow-xl hover:shadow-black/40"
             >
-              <div className="w-12 h-12 rounded-xl bg-neutral-800 flex items-center justify-center text-white font-black text-lg group-hover:scale-110 transition-transform">
-                {brand.name.substring(0, 2).toUpperCase()}
+              {/* Brand Logo Container replacing initials */}
+              <div className="w-full h-18 rounded-xl bg-neutral-950/80 border border-neutral-800/80 flex items-center justify-center p-2.5 group-hover:border-neutral-700 group-hover:bg-neutral-950 transition-all">
+                {brand.logo ? (
+                  <img
+                    src={brand.logo}
+                    alt={`Logótipo ${brand.name}`}
+                    className="max-h-10 w-auto max-w-[120px] object-contain transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className="text-white font-bold text-sm tracking-wide">
+                    {brand.name}
+                  </span>
+                )}
               </div>
-              <div className="mt-3">
-                <h3 className="font-bold text-white text-sm group-hover:text-neutral-200 transition-colors">
+
+              <div className="mt-3 w-full">
+                <h3 className="font-bold text-white text-sm group-hover:text-white transition-colors">
                   {brand.name}
                 </h3>
-                <p className="text-[11px] text-neutral-400 mt-1 line-clamp-2">
+                {brand.tag && (
+                  <span className="inline-block mt-1 px-2 py-0.5 rounded text-[10px] font-medium bg-neutral-800/90 text-neutral-300 border border-neutral-700/60">
+                    {brand.tag}
+                  </span>
+                )}
+                <p className="text-[11px] text-neutral-400 mt-1.5 line-clamp-2 leading-relaxed">
                   {brand.description}
                 </p>
               </div>

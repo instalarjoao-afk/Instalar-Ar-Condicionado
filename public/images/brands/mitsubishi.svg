@@ -1,0 +1,7 @@
+<svg viewBox="0 0 230 50" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(6, 6) scale(1.6)" fill="#E60012">
+    <path d="M8 22.38H0l4-6.92h8zm8 0h8l-4-6.92h-8zm0-13.84l-4-6.92-4 6.92 4 6.92Z" />
+  </g>
+  <text x="56" y="25" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="17" fill="#FFFFFF" letter-spacing="1">MITSUBISHI</text>
+  <text x="57" y="39" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#E60012" letter-spacing="3.2">ELECTRIC</text>
+</svg>
