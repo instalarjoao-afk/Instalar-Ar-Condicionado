@@ -219,7 +219,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-08",
-    src: "/images/servico-08.jpeg",
+    src: "/images/nipon-outdoor-bg.jpg",
     alt: "Duas unidades exteriores Nipon montadas em cobertura plana com apoios antivibráticos",
     title: "Unidades Exteriores em Cobertura",
     category: "exterior",
@@ -324,7 +324,7 @@ export const otherServices: ServiceItem[] = [
     id: "bomba-calor",
     title: "Bomba de Calor",
     description: "Soluções com bombas de calor para climatização e conforto, de acordo com as características e necessidades do espaço.",
-    image: "/images/servico-08.jpeg",
+    image: "/images/nipon-outdoor-bg.jpg",
     isPlaceholder: false,
     category: "outros",
     features: [

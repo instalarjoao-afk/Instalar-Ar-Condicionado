@@ -19,7 +19,7 @@ export const CoverageArea: React.FC = () => {
   ];
 
   return (
-    <section id="area-atuacao" className="py-20 bg-[#050505] text-neutral-100 relative border-t border-neutral-900">
+    <section id="area-atuacao" className="py-20 bg-black/25 text-neutral-100 relative border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

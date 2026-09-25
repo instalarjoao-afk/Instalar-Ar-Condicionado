@@ -10,7 +10,7 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-[#0a0a0a] text-neutral-100 relative border-t border-neutral-900">
+    <section id="faq" className="py-20 md:py-28 bg-black/30 text-neutral-100 relative border-t border-white/10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

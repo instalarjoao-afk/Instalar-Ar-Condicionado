@@ -4,7 +4,7 @@ import { ShieldCheck, Zap, Volume2, Sparkles } from 'lucide-react';
 
 export const Brands: React.FC = () => {
   return (
-    <section id="marcas" className="py-20 bg-[#050505] text-neutral-100 relative border-t border-neutral-900">
+    <section id="marcas" className="py-20 bg-black/25 text-neutral-100 relative border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

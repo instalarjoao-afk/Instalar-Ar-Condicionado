@@ -8,7 +8,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
-    <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#050505] text-neutral-100">
+    <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-transparent via-[#050505]/40 to-transparent text-neutral-100">
       {/* Background Glows & Architectural Grid Lines in Neutral Grays */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-white/[0.03] rounded-full blur-3xl" />

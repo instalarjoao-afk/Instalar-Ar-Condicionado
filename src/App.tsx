@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
+import { SiteBackground } from './components/SiteBackground';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { Gallery } from './components/Gallery';
@@ -25,14 +26,17 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-neutral-100 flex flex-col font-sans selection:bg-white selection:text-black">
+    <div className="relative min-h-screen bg-[#050505] text-neutral-100 flex flex-col font-sans selection:bg-white selection:text-black overflow-x-hidden">
+      {/* Background with user photo (Imagem 8) eliminating absolute black */}
+      <SiteBackground />
+
       {/* Sticky Header with navigation & contact CTAs */}
       <Header
         currentPath={currentPath}
         onNavigate={handleNavigate}
       />
 
-      <main className="flex-1">
+      <main className="relative z-10 flex-1">
         {/* Hero Section */}
         <Hero
           onNavigate={handleNavigate}
