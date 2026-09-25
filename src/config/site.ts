@@ -24,20 +24,21 @@ export const siteConfig = {
   subtitle: "Instalação de ar condicionado, bombas de calor, eletricidade e remodelações.",
   description: "Serviços para habitações e espaços comerciais, com soluções adaptadas às necessidades de cada projeto.",
   email: "instalar.joao@gmail.com",
-  phone1: "912 603 408",
-  phone2: "927 245 306",
-  phone1Raw: "+351912603408",
-  phone2Raw: "+351927245306",
-  whatsapp1: "https://wa.me/351912603408",
-  whatsapp2: "https://wa.me/351927245306",
-  whatsappMessage: "Olá, gostaria de solicitar um orçamento para instalação de ar condicionado em Coimbra.",
+  phone: "924 807 017",
+  phoneRaw: "+351924807017",
+  phoneFormatted: "+351 924 807 017",
+  phone1: "924 807 017",
+  phone1Raw: "+351924807017",
+  whatsapp: "https://wa.me/351924807017",
+  whatsapp1: "https://wa.me/351924807017",
+  whatsappMessage: "Olá, gostaria de falar sobre instalação ou manutenção de ar condicionado em Coimbra.",
   instagram: "https://www.instagram.com/instalar.arcondicionado?stkn=MWRicW13c29lYnpzZw==",
   serviceArea: "Coimbra e região",
   serviceAreaFull: "Coimbra e região, Portugal",
   logo: "/logo.png",
   highlights: [
-    "Coimbra e região",
-    "Orçamentos personalizados",
+    "Coimbra e concelhos vizinhos",
+    "Atendimento rápido e direto",
     "Soluções para diferentes espaços"
   ],
   brands: [
@@ -54,8 +55,8 @@ export const siteConfig = {
       description: "Acompanhamento direto e resposta rápida às suas questões e necessidades específicas."
     },
     {
-      title: "Orçamento personalizado",
-      description: "Propostas detalhadas e transparentes, adequadas à dimensão e características do seu espaço."
+      title: "Soluções personalizadas",
+      description: "Propostas claras e transparentes, adequadas à dimensão e características do seu espaço."
     },
     {
       title: "Instalação cuidada",
@@ -69,28 +70,28 @@ export const siteConfig = {
   processSteps: [
     {
       step: "01",
-      title: "PEDIDO DE ORÇAMENTO",
-      description: "Entre em contacto através do WhatsApp ou formulário."
+      title: "CONTACTO INICIAL",
+      description: "Entre em contacto através do WhatsApp ou chamada telefónica (+351 924 807 017)."
     },
     {
       step: "02",
-      title: "ANÁLISE",
-      description: "Recolhemos as informações necessárias sobre o espaço e o serviço."
+      title: "AVALIAÇÃO",
+      description: "Recolhemos as informações necessárias sobre o espaço e o serviço pretendido."
     },
     {
       step: "03",
-      title: "ORÇAMENTO",
-      description: "Apresentamos uma solução adequada ao serviço solicitado."
+      title: "PROPOSTA",
+      description: "Apresentamos uma solução adequada e transparente para o serviço pretendido."
     },
     {
       step: "04",
       title: "SERVIÇO",
-      description: "Agendamos a intervenção."
+      description: "Agendamos e executamos a intervenção com rigor técnico e limpeza."
     },
     {
       step: "05",
       title: "ACOMPANHAMENTO",
-      description: "Prestamos as orientações necessárias relativamente ao serviço realizado."
+      description: "Prestamos as orientações necessárias e assistência pós-intervenção."
     }
   ],
   faqs: [
@@ -99,12 +100,12 @@ export const siteConfig = {
       answer: "Sim, prestamos serviços de instalação, manutenção e assistência de ar condicionado em toda a região de Coimbra, tanto para habitações como para espaços comerciais."
     },
     {
-      question: "Como posso pedir um orçamento?",
-      answer: "Pode solicitar um orçamento preenchendo o formulário nesta página ou contactando-nos diretamente pelo WhatsApp através dos números 912 603 408 ou 927 245 306."
+      question: "Como posso entrar em contacto para agendar um serviço?",
+      answer: "Pode contactar-nos diretamente pelo WhatsApp ou por chamada telefónica através do número +351 924 807 017, ou enviar uma mensagem através do formulário nesta página."
     },
     {
       question: "Posso enviar fotografias do local?",
-      answer: "Sim, pode anexar fotografias do espaço através do nosso formulário de orçamento ou enviá-las pelo WhatsApp. Isto ajuda-nos a avaliar antecipadamente as características do local e as necessidades de instalação."
+      answer: "Sim, pode enviar fotografias do espaço diretamente pelo WhatsApp para o número +351 924 807 017. Isto ajuda-nos a avaliar antecipadamente as características do local e as necessidades de intervenção."
     },
     {
       question: "Fazem manutenção de ar condicionado?",

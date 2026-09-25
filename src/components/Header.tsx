@@ -5,10 +5,9 @@ import { siteConfig } from '../config/site';
 interface HeaderProps {
   currentPath?: string;
   onNavigate?: (path: string) => void;
-  onOpenQuote?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, onOpenQuote }) => {
+export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -73,13 +72,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
               Início
             </a>
             <a
-              href="#servicos"
-              onClick={(e) => handleLinkClick(e, '#servicos')}
-              className="text-sm font-medium text-[#E5E5E5] hover:text-white transition-colors"
-            >
-              Serviços
-            </a>
-            <a
               href="#marcas"
               onClick={(e) => handleLinkClick(e, '#marcas')}
               className="text-sm font-medium text-[#E5E5E5] hover:text-white transition-colors"
@@ -87,18 +79,11 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
               Marcas
             </a>
             <a
-              href="#galeria"
-              onClick={(e) => handleLinkClick(e, '#galeria')}
+              href="#servicos"
+              onClick={(e) => handleLinkClick(e, '#servicos')}
               className="text-sm font-medium text-[#E5E5E5] hover:text-white transition-colors"
             >
-              Galeria
-            </a>
-            <a
-              href="#orcamento"
-              onClick={(e) => handleLinkClick(e, '#orcamento')}
-              className="text-sm font-medium text-[#E5E5E5] hover:text-white transition-colors"
-            >
-              Orçamento
+              Serviços
             </a>
             <a
               href="#contactos"
@@ -121,34 +106,33 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
           {/* Desktop Right CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href={siteConfig.whatsapp1}
+              href={`tel:${siteConfig.phoneRaw}`}
+              className="metal-button-secondary px-3.5 py-2 rounded-lg text-xs font-semibold inline-flex items-center gap-2"
+              title="Ligar"
+            >
+              <Phone className="w-3.5 h-3.5 text-neutral-300" />
+              <span>{siteConfig.phone}</span>
+            </a>
+            <a
+              href={siteConfig.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Falar pelo WhatsApp"
-              className="p-2.5 rounded-lg border border-[#282828] text-[#BFC0C2] hover:text-white hover:border-[#BFC0C2]/40 transition-colors"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider px-4 py-2 rounded-lg inline-flex items-center gap-2 shadow-lg shadow-emerald-950/40 transition-all cursor-pointer"
               title="Falar pelo WhatsApp"
             >
-              <MessageSquare className="w-4 h-4 text-emerald-400" />
+              <MessageSquare className="w-4 h-4" />
+              <span>WhatsApp</span>
             </a>
-            <button
-              type="button"
-              onClick={() => {
-                if (onOpenQuote) onOpenQuote();
-                else if (onNavigate) onNavigate('orcamento');
-              }}
-              className="metal-button-primary px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider font-bold inline-flex items-center justify-center transition-all cursor-pointer"
-            >
-              PEDIR ORÇAMENTO
-            </button>
           </div>
 
           {/* Mobile Actions: WhatsApp & Hamburger */}
           <div className="flex lg:hidden items-center gap-2">
             <a
-              href={siteConfig.whatsapp1}
+              href={siteConfig.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-[#171717] border border-[#282828] text-emerald-400"
+              className="p-2 rounded-lg bg-emerald-600 text-white"
               aria-label="WhatsApp"
             >
               <MessageSquare className="w-5 h-5" />
@@ -176,13 +160,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
               Início
             </a>
             <a
-              href="#servicos"
-              onClick={(e) => handleLinkClick(e, '#servicos')}
-              className="px-3 py-2.5 rounded-md text-base font-medium text-[#E5E5E5] hover:bg-[#171717] hover:text-white"
-            >
-              Serviços
-            </a>
-            <a
               href="#marcas"
               onClick={(e) => handleLinkClick(e, '#marcas')}
               className="px-3 py-2.5 rounded-md text-base font-medium text-[#E5E5E5] hover:bg-[#171717] hover:text-white"
@@ -190,18 +167,11 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
               Marcas
             </a>
             <a
-              href="#galeria"
-              onClick={(e) => handleLinkClick(e, '#galeria')}
+              href="#servicos"
+              onClick={(e) => handleLinkClick(e, '#servicos')}
               className="px-3 py-2.5 rounded-md text-base font-medium text-[#E5E5E5] hover:bg-[#171717] hover:text-white"
             >
-              Galeria
-            </a>
-            <a
-              href="#orcamento"
-              onClick={(e) => handleLinkClick(e, '#orcamento')}
-              className="px-3 py-2.5 rounded-md text-base font-medium text-[#E5E5E5] hover:bg-[#171717] hover:text-white"
-            >
-              Orçamento
+              Serviços
             </a>
             <a
               href="#contactos"
@@ -221,33 +191,23 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
             </a>
 
             <div className="pt-3 border-t border-[#282828] flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  if (onOpenQuote) onOpenQuote();
-                  else if (onNavigate) onNavigate('orcamento');
-                }}
-                className="metal-button-primary w-full py-3 rounded-lg text-center text-xs uppercase tracking-wider font-bold block cursor-pointer"
+              <a
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-center text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2"
               >
-                PEDIR ORÇAMENTO
-              </button>
-              <div className="grid grid-cols-2 gap-2 mt-1">
-                <a
-                  href={`tel:${siteConfig.phone1Raw}`}
-                  className="metal-button-secondary py-2.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>{siteConfig.phone1}</span>
-                </a>
-                <a
-                  href={`tel:${siteConfig.phone2Raw}`}
-                  className="metal-button-secondary py-2.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>{siteConfig.phone2}</span>
-                </a>
-              </div>
+                <MessageSquare className="w-4 h-4" />
+                <span>WhatsApp (+351 {siteConfig.phone})</span>
+              </a>
+              <a
+                href={`tel:${siteConfig.phoneRaw}`}
+                className="metal-button-secondary w-full py-2.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-2"
+              >
+                <Phone className="w-3.5 h-3.5" />
+                <span>Ligar: {siteConfig.phone}</span>
+              </a>
             </div>
           </div>
         </div>

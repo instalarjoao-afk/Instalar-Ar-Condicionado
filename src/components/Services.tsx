@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { mainServices, otherServices, ServiceItem, siteConfig } from '../config/site';
-import { Wind, Wrench, Sparkles, CheckCircle2, ArrowRight, ShieldCheck, Flame, Zap, Home, MessageSquare, Info } from 'lucide-react';
+import { Wind, Wrench, Sparkles, CheckCircle2, ShieldCheck, Flame, Zap, Home, MessageSquare, Info } from 'lucide-react';
 
 interface ServicesProps {
-  onSelectServiceForQuote: (serviceTitle: string) => void;
   onOpenServiceDetails?: (service: ServiceItem) => void;
 }
 
-export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onOpenServiceDetails }) => {
+export const Services: React.FC<ServicesProps> = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'climatizacao' | 'outros'>('all');
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
 
@@ -20,49 +19,49 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onO
   const getServiceIcon = (id: string) => {
     switch (id) {
       case 'instalacao-ar-condicionado':
-        return <Wind className="w-5 h-5 text-cyan-400" />;
+        return <Wind className="w-5 h-5 text-white" />;
       case 'manutencao':
-        return <Wrench className="w-5 h-5 text-sky-400" />;
+        return <Wrench className="w-5 h-5 text-neutral-300" />;
       case 'limpeza-higienizacao':
-        return <Sparkles className="w-5 h-5 text-emerald-400" />;
+        return <Sparkles className="w-5 h-5 text-white" />;
       case 'assistencia-tecnica':
-        return <ShieldCheck className="w-5 h-5 text-blue-400" />;
+        return <ShieldCheck className="w-5 h-5 text-neutral-300" />;
       case 'bomba-calor':
-        return <Flame className="w-5 h-5 text-amber-400" />;
+        return <Flame className="w-5 h-5 text-white" />;
       case 'eletricidade':
-        return <Zap className="w-5 h-5 text-yellow-400" />;
+        return <Zap className="w-5 h-5 text-neutral-300" />;
       case 'remodelacoes':
-        return <Home className="w-5 h-5 text-indigo-400" />;
+        return <Home className="w-5 h-5 text-white" />;
       default:
-        return <Wind className="w-5 h-5 text-cyan-400" />;
+        return <Wind className="w-5 h-5 text-white" />;
     }
   };
 
   return (
-    <section id="servicos" className="py-20 md:py-28 bg-slate-900 text-slate-100 relative">
+    <section id="servicos" className="py-20 md:py-28 bg-[#0a0a0a] text-neutral-100 relative border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-700/80 text-neutral-300 text-xs font-semibold uppercase tracking-wider mb-3">
             O que fazemos por si
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Serviços Especializados em Climatização
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-neutral-400 leading-relaxed">
             Soluções completas para habitações e espaços comerciais em Coimbra. Trabalhamos com rigor técnico, pontualidade e os melhores materiais do mercado.
           </p>
 
           {/* Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 bg-slate-950 rounded-2xl border border-slate-800 max-w-md mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-8 p-1.5 bg-neutral-950 rounded-2xl border border-neutral-800 max-w-md mx-auto">
             <button
               type="button"
               onClick={() => setActiveTab('all')}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === 'all'
-                  ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-white text-black shadow-md shadow-white/10'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               Todos ({mainServices.length + otherServices.length})
@@ -72,8 +71,8 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onO
               onClick={() => setActiveTab('climatizacao')}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === 'climatizacao'
-                  ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-white text-black shadow-md shadow-white/10'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               Climatização ({mainServices.length})
@@ -83,8 +82,8 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onO
               onClick={() => setActiveTab('outros')}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === 'outros'
-                  ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-white text-black shadow-md shadow-white/10'
+                  : 'text-neutral-400 hover:text-white'
               }`}
             >
               Outros Serviços ({otherServices.length})
@@ -97,26 +96,26 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onO
           {displayedServices.map((service) => (
             <div
               key={service.id}
-              className="group rounded-2xl bg-slate-950/70 border border-slate-800/80 hover:border-cyan-500/50 transition-all duration-300 flex flex-col overflow-hidden hover:shadow-xl hover:shadow-cyan-950/20"
+              className="group rounded-2xl bg-neutral-900/60 border border-neutral-800 hover:border-neutral-600 transition-all duration-300 flex flex-col overflow-hidden hover:shadow-xl hover:shadow-black"
             >
               {/* Service Card Image */}
               {service.image && (
-                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
+                <div className="relative h-48 w-full overflow-hidden bg-neutral-950">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-90" />
                   
                   {/* Category Pill on Image */}
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold tracking-wide uppercase bg-slate-900/90 text-cyan-300 border border-cyan-500/30 backdrop-blur-md">
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold tracking-wide uppercase bg-black/80 text-neutral-200 border border-neutral-700 backdrop-blur-md">
                     {service.category === 'climatizacao' ? 'Ar Condicionado' : 'Especialidade'}
                   </span>
 
                   {service.isPlaceholder && (
-                    <span className="absolute top-3 right-3 px-2 py-0.5 rounded text-[10px] bg-slate-800/90 text-slate-400 border border-slate-700">
+                    <span className="absolute top-3 right-3 px-2 py-0.5 rounded text-[10px] bg-neutral-900/90 text-neutral-400 border border-neutral-800">
                       Serviço Complementar
                     </span>
                   )}
@@ -127,24 +126,24 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onO
               <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
                 <div>
                   <div className="flex items-center gap-3 mb-2.5">
-                    <div className="p-2 rounded-xl bg-slate-900 border border-slate-800">
+                    <div className="p-2 rounded-xl bg-neutral-800 border border-neutral-700">
                       {getServiceIcon(service.id)}
                     </div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white group-hover:text-neutral-200 transition-colors">
                       {service.title}
                     </h3>
                   </div>
 
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-neutral-400 leading-relaxed">
                     {service.description}
                   </p>
 
                   {/* Key Features Bullet List */}
                   {service.features && service.features.length > 0 && (
-                    <ul className="mt-4 space-y-2 border-t border-slate-800/80 pt-4">
+                    <ul className="mt-4 space-y-2 border-t border-neutral-800 pt-4">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                        <li key={idx} className="flex items-start gap-2 text-xs text-neutral-300">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0 mt-0.5" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -153,34 +152,25 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onO
                 </div>
 
                 {/* Actions */}
-                <div className="pt-2 flex items-center gap-2 border-t border-slate-800/60">
-                  <button
-                    type="button"
-                    onClick={() => onSelectServiceForQuote(service.title)}
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 hover:from-cyan-500 hover:to-blue-600 text-cyan-300 hover:text-slate-950 font-semibold text-xs transition-all border border-cyan-500/30 hover:border-transparent cursor-pointer"
+                <div className="pt-2 flex items-center gap-2 border-t border-neutral-800">
+                  <a
+                    href={`https://wa.me/351924807017?text=${encodeURIComponent(`Olá, gostaria de informações sobre o serviço de ${service.title} em Coimbra.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all shadow-sm"
                   >
-                    <span>Pedir Orçamento</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    <span>Consultar no WhatsApp</span>
+                  </a>
 
                   <button
                     type="button"
                     onClick={() => setSelectedService(service)}
-                    className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-800 transition-colors cursor-pointer"
+                    className="p-2.5 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white border border-neutral-700 transition-colors cursor-pointer"
                     title="Ver detalhes do serviço"
                   >
                     <Info className="w-4 h-4" />
                   </button>
-
-                  <a
-                    href={`https://wa.me/351912603408?text=${encodeURIComponent(`Olá, gostaria de informações sobre o serviço de ${service.title} em Coimbra.`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2.5 rounded-xl bg-emerald-950/60 hover:bg-emerald-600 text-emerald-400 hover:text-white border border-emerald-500/30 transition-colors"
-                    title="Falar no WhatsApp sobre este serviço"
-                  >
-                    <MessageSquare className="w-4 h-4" />
-                  </a>
                 </div>
               </div>
             </div>
@@ -189,45 +179,45 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onO
 
         {/* Modal for Service Details */}
         {selectedService && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in">
-            <div className="relative w-full max-w-xl bg-slate-900 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-6">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in">
+            <div className="relative w-full max-w-xl bg-neutral-900 border border-neutral-700 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-6">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
+                  <div className="p-2.5 rounded-xl bg-neutral-800 border border-neutral-700">
                     {getServiceIcon(selectedService.id)}
                   </div>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold text-white">{selectedService.title}</h3>
-                    <p className="text-xs text-cyan-400">Instalar Ar Condicionado • Coimbra</p>
+                    <p className="text-xs text-neutral-400">Instalar Ar Condicionado • Coimbra</p>
                   </div>
                 </div>
                 <button
                   type="button"
                   onClick={() => setSelectedService(null)}
-                  className="text-slate-400 hover:text-white p-2 rounded-lg bg-slate-800 hover:bg-slate-700 cursor-pointer"
+                  className="text-neutral-400 hover:text-white p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 cursor-pointer"
                 >
                   ✕
                 </button>
               </div>
 
               {selectedService.image && (
-                <div className="h-52 w-full rounded-xl overflow-hidden bg-slate-950">
+                <div className="h-52 w-full rounded-xl overflow-hidden bg-neutral-950">
                   <img src={selectedService.image} alt={selectedService.title} className="w-full h-full object-cover" />
                 </div>
               )}
 
-              <p className="text-sm text-slate-300 leading-relaxed">
+              <p className="text-sm text-neutral-300 leading-relaxed">
                 {selectedService.description}
               </p>
 
               <div>
-                <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
+                <h4 className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-2">
                   O que inclui este serviço:
                 </h4>
                 <ul className="space-y-2">
                   {selectedService.features.map((feat, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs sm:text-sm text-slate-200">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+                    <li key={i} className="flex items-center gap-2 text-xs sm:text-sm text-neutral-200">
+                      <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -235,21 +225,19 @@ export const Services: React.FC<ServicesProps> = ({ onSelectServiceForQuote, onO
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    const title = selectedService.title;
-                    setSelectedService(null);
-                    onSelectServiceForQuote(title);
-                  }}
-                  className="flex-1 py-3 px-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-colors text-center cursor-pointer"
+                <a
+                  href={`https://wa.me/351924807017?text=${encodeURIComponent(`Olá, gostaria de esclarecer dúvidas sobre o serviço de ${selectedService.title} em Coimbra.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-colors text-center flex items-center justify-center gap-2"
                 >
-                  Pedir Orçamento para {selectedService.title}
-                </button>
+                  <MessageSquare className="w-4 h-4" />
+                  <span>Falar no WhatsApp sobre este Serviço</span>
+                </a>
                 <button
                   type="button"
                   onClick={() => setSelectedService(null)}
-                  className="py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-colors cursor-pointer"
+                  className="py-3 px-4 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-300 font-medium text-sm transition-colors cursor-pointer"
                 >
                   Fechar
                 </button>

@@ -3,7 +3,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { Gallery } from './components/Gallery';
-import { QuoteCalculator } from './components/QuoteCalculator';
 import { Brands } from './components/Brands';
 import { Process } from './components/Process';
 import { CoverageArea } from './components/CoverageArea';
@@ -15,7 +14,6 @@ import { LegalModal } from './components/LegalModal';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState<string>('#inicio');
-  const [preselectedService, setPreselectedService] = useState<string | undefined>(undefined);
   const [legalModalType, setLegalModalType] = useState<'privacidade' | 'termos' | null>(null);
 
   const handleNavigate = (sectionId: string) => {
@@ -26,51 +24,31 @@ export default function App() {
     }
   };
 
-  const handleOpenQuote = (serviceTitle?: string) => {
-    if (serviceTitle) {
-      setPreselectedService(serviceTitle);
-    }
-    handleNavigate('orcamento');
-  };
-
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#050505] text-neutral-100 flex flex-col font-sans selection:bg-white selection:text-black">
       {/* Sticky Header with navigation & contact CTAs */}
       <Header
         currentPath={currentPath}
         onNavigate={handleNavigate}
-        onOpenQuote={() => handleOpenQuote()}
       />
 
       <main className="flex-1">
         {/* Hero Section */}
         <Hero
-          onOpenQuote={handleOpenQuote}
           onNavigate={handleNavigate}
-        />
-
-        {/* Services Section */}
-        <Services
-          onSelectServiceForQuote={handleOpenQuote}
-        />
-
-        {/* Instant Quote Simulation Tool */}
-        <QuoteCalculator
-          initialService={preselectedService}
-        />
-
-        {/* Gallery of Real Work with Before/After */}
-        <Gallery
-          onSelectPhotoForQuote={handleOpenQuote}
         />
 
         {/* Supported Brands & Technology */}
         <Brands />
 
+        {/* Services Section */}
+        <Services />
+
+        {/* Gallery of Real Work with Before/After */}
+        <Gallery />
+
         {/* Working Process */}
-        <Process
-          onOpenQuote={() => handleOpenQuote()}
-        />
+        <Process />
 
         {/* Service Coverage Area in Coimbra */}
         <CoverageArea />
