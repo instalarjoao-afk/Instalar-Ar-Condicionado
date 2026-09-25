@@ -156,7 +156,7 @@ export const siteConfig = {
 export const galleryImages: GalleryItem[] = [
   {
     id: "servico-01",
-    src: "/Imagem 1.jpeg",
+    src: "/images/Imagem 1.jpeg",
     alt: "Instalação de ar condicionado interior sobre portas em habitação",
     title: "Instalação Interior Residencial",
     category: "instalacao",
@@ -165,7 +165,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-02",
-    src: "/Imagem 2.jpeg",
+    src: "/images/Imagem 2.jpeg",
     alt: "Unidade exterior de ar condicionado instalada em varanda com suportes de parede",
     title: "Unidade Exterior em Varanda",
     category: "exterior",
@@ -174,7 +174,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-03",
-    src: "/Imagem 3.jpeg",
+    src: "/images/Imagem 3.jpeg",
     alt: "Unidade interior split moderna da marca Haier",
     title: "Split Haier em Espaço Moderno",
     category: "instalacao",
@@ -183,7 +183,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-04",
-    src: "/Imagem 4.jpeg",
+    src: "/images/Imagem 4.jpeg",
     alt: "Filtros de ar condicionado com poeira acumulada antes da limpeza e higienização",
     title: "Manutenção - Estado Inicial (Antes)",
     category: "higienizacao",
@@ -192,7 +192,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-05",
-    src: "/Imagem 5.jpeg",
+    src: "/images/Imagem 5.jpeg",
     alt: "Unidade de ar condicionado totalmente limpa e higienizada",
     title: "Higienização Concluída (Depois)",
     category: "higienizacao",
@@ -201,8 +201,8 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-06",
-    src: "/Imagem 6.jpeg",
-    alt: "Instalação de ar condicionado em parede azul decorada com iluminação pendente",
+    src: "/images/Imagem 6.jpeg",
+    alt: "Unidade de ar condicionado instalada em sala decorada",
     title: "Integração Arquitetónica Elegante",
     category: "instalacao",
     categoryLabel: "Instalação",
@@ -210,16 +210,16 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-07",
-    src: "/Imagem 7.jpeg",
-    alt: "Instalação em sala com vigas de madeira rústica e display digital com indicação de temperatura",
+    src: "/images/Imagem 7.jpeg",
+    alt: "Ar condicionado em sala com teto de madeira",
     title: "Ambiente Rústico e Conforto Térmico",
     category: "instalacao",
     categoryLabel: "Instalação",
-    description: "Climatização precisa com leitura de temperatura digital (22°C) sob vigamento de madeira tradicional."
+    description: "Climatização precisa com leitura de temperatura digital sob vigamento de madeira tradicional."
   },
   {
     id: "servico-08",
-    src: "/Imagem 8.jpeg",
+    src: "/images/Imagem 8.jpeg",
     alt: "Duas unidades exteriores Nipon montadas em cobertura plana com apoios antivibráticos",
     title: "Unidades Exteriores em Cobertura",
     category: "exterior",
@@ -228,7 +228,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-09",
-    src: "/Imagem 9.jpeg",
+    src: "/images/Imagem 9.jpeg",
     alt: "Ligação técnica e isolamento térmico de tubagens de ar condicionado em terraço",
     title: "Acabamento Técnico e Isolamento",
     category: "exterior",

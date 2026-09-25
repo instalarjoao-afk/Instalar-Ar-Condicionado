@@ -145,7 +145,7 @@ export const Gallery: React.FC<GalleryProps> = () => {
               <div className="relative h-64 sm:h-80 w-full rounded-2xl overflow-hidden select-none border border-neutral-700 bg-neutral-950 shadow-inner">
                 {/* Clean Image (After) */}
                 <img
-                  src="/Imagem 5.jpeg"
+                  src="/images/Imagem 5.jpeg"
                   alt="Depois da higienização"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -159,7 +159,7 @@ export const Gallery: React.FC<GalleryProps> = () => {
                   style={{ width: `${sliderPosition}%` }}
                 >
                   <img
-                    src="/Imagem 4.jpeg"
+                    src="/images/Imagem 4.jpeg"
                     alt="Antes da limpeza - filtros com pó"
                     className="absolute inset-0 w-full h-full object-cover max-w-none"
                     style={{ width: '100%', minWidth: '100%' }}
