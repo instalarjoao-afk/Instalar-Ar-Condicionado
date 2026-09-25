@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Background Outer Plate Gradient -->
+    <linearGradient id="bgPlate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2b2d"/>
+      <stop offset="25%" stop-color="#18191b"/>
+      <stop offset="50%" stop-color="#2d2f32"/>
+      <stop offset="75%" stop-color="#141416"/>
+      <stop offset="100%" stop-color="#252628"/>
+    </linearGradient>
+
+    <!-- Chrome Outer Ring Gradients -->
+    <linearGradient id="outerBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8ebed"/>
+      <stop offset="20%" stop-color="#8a8d91"/>
+      <stop offset="45%" stop-color="#fdfdfd"/>
+      <stop offset="55%" stop-color="#55585c"/>
+      <stop offset="80%" stop-color="#d6dadf"/>
+      <stop offset="100%" stop-color="#2b2d30"/>
+    </linearGradient>
+
+    <linearGradient id="metalRing" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f2022"/>
+      <stop offset="30%" stop-color="#a4a8ad"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#686b70"/>
+      <stop offset="100%" stop-color="#121315"/>
+    </linearGradient>
+
+    <radialGradient id="innerDisc" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1c1e21"/>
+      <stop offset="45%" stop-color="#111214"/>
+      <stop offset="75%" stop-color="#090a0b"/>
+      <stop offset="97%" stop-color="#181a1d"/>
+      <stop offset="100%" stop-color="#3a3d42"/>
+    </radialGradient>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Square Frame with Brushed Dark Finish -->
+  <rect width="800" height="800" rx="36" fill="url(#bgPlate)"/>
+  <rect x="8" y="8" width="784" height="784" rx="30" fill="none" stroke="#686b70" stroke-width="4" opacity="0.6"/>
+  <rect x="18" y="18" width="764" height="764" rx="24" fill="none" stroke="#000000" stroke-width="6" opacity="0.9"/>
+
+  <!-- Outer Chrome Medallion Ring -->
+  <circle cx="400" cy="400" r="350" fill="url(#outerBevel)"/>
+  <circle cx="400" cy="400" r="334" fill="#0d0e10" stroke="#111214" stroke-width="2"/>
+  <circle cx="400" cy="400" r="322" fill="url(#metalRing)"/>
+  <circle cx="400" cy="400" r="312" fill="#050607"/>
+
+  <!-- Inner Center Disc (Radial Dark Metal) -->
+  <circle cx="400" cy="400" r="306" fill="url(#innerDisc)"/>
+
+  <!-- Subtle Brushed Texture concentric circles -->
+  <circle cx="400" cy="400" r="280" fill="none" stroke="#25272b" stroke-width="1" opacity="0.4"/>
+  <circle cx="400" cy="400" r="250" fill="none" stroke="#25272b" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="400" r="220" fill="none" stroke="#25272b" stroke-width="1" opacity="0.4"/>
+  <circle cx="400" cy="400" r="190" fill="none" stroke="#25272b" stroke-width="1" opacity="0.3"/>
+
+  <!-- Stylized Sketchy White Loop / Oval around 'Instalar' -->
+  <g opacity="0.95" stroke="#ffffff" fill="none" stroke-linecap="round">
+    <!-- Outer scribble arc -->
+    <path d="M 230 330 C 180 290, 240 240, 390 230 C 530 220, 620 250, 600 295 C 580 340, 480 370, 360 380 C 260 388, 195 365, 220 325 C 240 290, 340 245, 480 238 C 580 232, 630 255, 615 285" stroke-width="3.5"/>
+    <!-- Overlapping inner swirl -->
+    <path d="M 215 320 C 230 260, 360 232, 510 240 C 600 245, 625 270, 580 310 C 530 355, 380 375, 270 368 C 210 364, 185 340, 240 295" stroke-width="2.2" opacity="0.8"/>
+  </g>
+
+  <!-- Typography: 'Instalar' -->
+  <text x="400" y="315" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="78" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">Instalar</text>
+
+  <!-- Typography: 'Ar condicionado' -->
+  <text x="400" y="415" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">Ar condicionado</text>
+
+  <!-- Bottom Section: Phone in Chat Bubble Icon & Phone Numbers -->
+  <g transform="translate(180, 470)">
+    <!-- Speech Bubble with Phone Handset -->
+    <g stroke="#ffffff" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Chat balloon outline with tail -->
+      <path d="M 45 10 C 80 10, 105 32, 105 60 C 105 88, 80 110, 45 110 C 35 110, 26 107, 18 103 L 2 118 L 8 92 C 3 83, 0 72, 0 60 C 0 32, 25 10, 45 10 Z" />
+      <!-- Telephone handset icon inside -->
+      <path d="M 32 35 C 28 35, 23 39, 23 44 C 23 68, 42 87, 66 87 C 71 87, 75 82, 75 78 L 68 64 C 66 61, 62 60, 59 62 L 53 66 C 45 61, 39 55, 34 47 L 38 41 C 40 38, 39 34, 36 32 Z" fill="#ffffff" stroke-width="1"/>
+    </g>
+
+    <!-- Phone Numbers -->
+    <text x="135" y="55" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="1.5">912 603 408</text>
+    <text x="135" y="118" font-family="'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="1.5">927 245 306</text>
+  </g>
+</svg>

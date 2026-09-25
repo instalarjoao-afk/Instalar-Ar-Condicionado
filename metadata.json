@@ -1,0 +1,6 @@
+{
+  "name": "Instalar Ar Condicionado - Climatização em Coimbra",
+  "description": "Instalação, manutenção e assistência de ar condicionado em Coimbra e região. Serviços de eletricidade, bombas de calor e remodelações.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
