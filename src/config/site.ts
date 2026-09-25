@@ -43,6 +43,12 @@ export const siteConfig = {
   ],
   brands: [
     {
+      name: "Nipon",
+      description: "Equipamentos robustos com excelente relação preço-qualidade",
+      logo: "/images/brands/nipon.svg",
+      tag: "Robustez"
+    },
+    {
       name: "Mitsubishi Electric",
       description: "Referência japonesa em eficiência energética e silêncio absoluto",
       logo: "/images/brands/mitsubishi.svg",
@@ -65,12 +71,6 @@ export const siteConfig = {
       description: "Autolimpeza avançada, fiabilidade e conectividade hOn",
       logo: "/images/brands/haier.svg",
       tag: "Conectividade"
-    },
-    {
-      name: "Nipon",
-      description: "Equipamentos robustos com excelente relação preço-qualidade",
-      logo: "/images/brands/nipon.svg",
-      tag: "Robustez"
     },
     {
       name: "CoolSmart",
@@ -156,7 +156,7 @@ export const siteConfig = {
 export const galleryImages: GalleryItem[] = [
   {
     id: "servico-01",
-    src: "/images/servico-01.jpeg",
+    src: "/Imagem 1.jpeg",
     alt: "Instalação de ar condicionado interior sobre portas em habitação",
     title: "Instalação Interior Residencial",
     category: "instalacao",
@@ -165,7 +165,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-02",
-    src: "/images/servico-02.jpeg",
+    src: "/Imagem 2.jpeg",
     alt: "Unidade exterior de ar condicionado instalada em varanda com suportes de parede",
     title: "Unidade Exterior em Varanda",
     category: "exterior",
@@ -174,7 +174,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-03",
-    src: "/images/servico-03.jpeg",
+    src: "/Imagem 3.jpeg",
     alt: "Unidade interior split moderna da marca Haier",
     title: "Split Haier em Espaço Moderno",
     category: "instalacao",
@@ -183,7 +183,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-04",
-    src: "/images/servico-04.jpeg",
+    src: "/Imagem 4.jpeg",
     alt: "Filtros de ar condicionado com poeira acumulada antes da limpeza e higienização",
     title: "Manutenção - Estado Inicial (Antes)",
     category: "higienizacao",
@@ -192,7 +192,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-05",
-    src: "/images/servico-05.jpeg",
+    src: "/Imagem 5.jpeg",
     alt: "Unidade de ar condicionado totalmente limpa e higienizada",
     title: "Higienização Concluída (Depois)",
     category: "higienizacao",
@@ -201,7 +201,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-06",
-    src: "/images/servico-06.jpeg",
+    src: "/Imagem 6.jpeg",
     alt: "Instalação de ar condicionado em parede azul decorada com iluminação pendente",
     title: "Integração Arquitetónica Elegante",
     category: "instalacao",
@@ -210,7 +210,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-07",
-    src: "/images/servico-07.jpeg",
+    src: "/Imagem 7.jpeg",
     alt: "Instalação em sala com vigas de madeira rústica e display digital com indicação de temperatura",
     title: "Ambiente Rústico e Conforto Térmico",
     category: "instalacao",
@@ -219,7 +219,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-08",
-    src: "/images/nipon-outdoor-bg.jpg",
+    src: "/Imagem 8.jpeg",
     alt: "Duas unidades exteriores Nipon montadas em cobertura plana com apoios antivibráticos",
     title: "Unidades Exteriores em Cobertura",
     category: "exterior",
@@ -228,7 +228,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: "servico-09",
-    src: "/images/servico-09.jpeg",
+    src: "/Imagem 9.jpeg",
     alt: "Ligação técnica e isolamento térmico de tubagens de ar condicionado em terraço",
     title: "Acabamento Técnico e Isolamento",
     category: "exterior",
