@@ -242,7 +242,7 @@ export const mainServices: ServiceItem[] = [
     id: "instalacao-ar-condicionado",
     title: "Instalação de Ar Condicionado",
     description: "Instalação de sistemas de ar condicionado adaptada às características do espaço.",
-    image: "/images/servico-01.jpeg",
+    image: "/Imagem 6.jpeg",
     category: "climatizacao",
     features: [
       "Habitações e espaços comerciais",
@@ -255,7 +255,7 @@ export const mainServices: ServiceItem[] = [
     id: "manutencao",
     title: "Manutenção",
     description: "Manutenção de sistemas de ar condicionado para ajudar a preservar o desempenho e o bom funcionamento dos equipamentos.",
-    image: "/images/servico-04.jpeg",
+    image: "/Imagem 2.jpeg",
     category: "climatizacao",
     features: [
       "Verificação de pressões e gás refrigerante",
@@ -268,7 +268,7 @@ export const mainServices: ServiceItem[] = [
     id: "limpeza-higienizacao",
     title: "Limpeza e Higienização",
     description: "Limpeza e higienização dos equipamentos de ar condicionado.",
-    image: "/images/servico-05.jpeg",
+    image: "/Imagem 5.jpeg",
     category: "climatizacao",
     features: [
       "Lavagem profunda de filtros",
@@ -281,7 +281,7 @@ export const mainServices: ServiceItem[] = [
     id: "assistencia-tecnica",
     title: "Assistência Técnica",
     description: "Apoio na identificação de problemas e assistência aos equipamentos.",
-    image: "/images/servico-07.jpeg",
+    image: "/Imagem 1.jpeg",
     category: "climatizacao",
     features: [
       "Diagnóstico rigoroso de avarias",
@@ -294,7 +294,7 @@ export const mainServices: ServiceItem[] = [
     id: "avaliacao-espaco",
     title: "Avaliação do Espaço",
     description: "Análise do espaço para ajudar a encontrar uma solução de climatização adequada.",
-    image: "/images/servico-03.jpeg",
+    image: "/Imagem 7.jpeg",
     category: "climatizacao",
     features: [
       "Cálculo de potência térmica necessária (BTU)",
@@ -310,7 +310,7 @@ export const otherServices: ServiceItem[] = [
     id: "eletricidade",
     title: "Eletricidade",
     description: "Serviços de eletricidade para instalações, melhorias e necessidades elétricas de habitações e espaços comerciais.",
-    image: "/images/servico-eletricidade.jpg",
+    image: "/Imagem 9.jpeg",
     isPlaceholder: true,
     category: "outros",
     features: [
@@ -338,7 +338,7 @@ export const otherServices: ServiceItem[] = [
     id: "remodelacoes",
     title: "Remodelações",
     description: "Serviços de remodelação e melhoria de espaços, com soluções adaptadas às necessidades de cada projeto.",
-    image: "/images/servico-remodelacoes.jpg",
+    image: "/Captura de tela 2026-09-25 185318.png",
     isPlaceholder: true,
     category: "outros",
     features: [
