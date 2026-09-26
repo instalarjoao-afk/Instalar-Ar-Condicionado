@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               <div className="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900/80 p-2 shadow-2xl shadow-black">
                 <div className="relative h-80 sm:h-96 w-full rounded-xl overflow-hidden bg-neutral-950">
                   <img
-                    src="/Imagem 3.jpeg"
+                    src="/images/Imagem 3.jpeg"
                     alt="Instalação profissional de ar condicionado em Coimbra"
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                   />
